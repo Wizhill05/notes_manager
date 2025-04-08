@@ -1,124 +1,70 @@
-# Hospital Management System
+# Notes Management System
 
-A modern hospital management system built with React and Node.js, using SQLite for data storage.
+A web application for managing notebooks, notes, and tags with a user-friendly interface. This application allows users to create, update, delete, and search for notes, as well as manage their notebooks and tags.
 
 ## Features
 
-- Patient Management
+- Create, update, and delete notebooks
+- Create, update, and delete notes
+- Attach PDF files to notes
+- Tag notes for better organization
+- Search functionality to find notes quickly
+- View database tables and their contents
 
-  - Register new patients
-  - View patient details
-  - Track patient medical history
+## Technologies Used
 
-- Doctor Management
+- React for the frontend
+- Express.js for the backend
+- SQLite for the database
+- Chart.js for data visualization
+- React-PDF for displaying PDF files
 
-  - View doctor profiles
-  - Track doctor workload
-  - Manage doctor specializations
+## Installation
 
-- Check-in System
-
-  - Create new patient check-ins
-  - Assign doctors to patients
-  - Record symptoms, diagnosis, and prescriptions
-  - Schedule follow-up appointments
-
-- Disease Tracking
-
-  - Maintain disease database
-  - Track disease statistics
-  - Monitor contagious diseases
-
-- Dashboard
-  - View hospital statistics
-  - Track daily/weekly check-ins
-  - Monitor disease distribution
-  - View doctor workload
-
-## Tech Stack
-
-- Frontend: React.js
-- Backend: Node.js with Express
-- Database: SQLite
-- Charts: Chart.js
-
-## API Endpoints
-
-### Patients
-
-- GET `/api/patients` - Get all patients
-- GET `/api/patients/:id` - Get patient by ID
-- POST `/api/patients` - Create new patient
-- PUT `/api/patients/:id` - Update patient
-- GET `/api/patients/:id/history` - Get patient's medical history
-
-### Doctors
-
-- GET `/api/doctors` - Get all doctors
-- GET `/api/doctors/:id` - Get doctor by ID
-- POST `/api/doctors` - Create new doctor
-
-### Diseases
-
-- GET `/api/diseases` - Get all diseases
-- GET `/api/diseases/:id` - Get disease by ID
-- POST `/api/diseases` - Create new disease
-
-### Check-ins
-
-- GET `/api/checkins` - Get all check-ins
-- GET `/api/checkins/:id` - Get check-in by ID
-- POST `/api/checkins` - Create new check-in
-
-### Statistics
-
-- GET `/api/stats/hospital` - Get hospital statistics
-- GET `/api/stats/diseases` - Get disease statistics
-- GET `/api/stats/doctor-workload` - Get doctor workload statistics
-
-## Setup
-
-1. Install dependencies:
+1. Clone the repository:
 
    ```bash
-   # Install backend dependencies
+   git clone <repository-url>
+   cd notes
+   ```
+
+2. Install dependencies for the server:
+
+   ```bash
    cd server
    npm install
+   ```
 
-   # Install frontend dependencies
+3. Install dependencies for the client:
+
+   ```bash
    cd ..
    npm install
    ```
 
-2. Start the backend server:
+4. Start the server:
 
    ```bash
    cd server
    npm start
    ```
 
-3. Start the frontend development server:
-
+5. Start the client:
    ```bash
+   cd ..
    npm run dev
    ```
 
-4. Open http://localhost:5173 in your browser
+## Usage
 
-## Database Schema
-
-The system uses the following main entities:
-
-- **Patient**: Stores patient information including personal details and medical history
-- **Doctor**: Manages doctor profiles and specializations
-- **Disease**: Maintains a database of diseases and their characteristics
-- **Check-in**: Records patient visits, diagnoses, and treatments
-- **Medical History**: Tracks patient's historical medical conditions
+- Open the application in your web browser at `http://localhost:5000`.
+- Use the navigation menu to switch between notebooks, notes, tags, and the database view.
+- Follow the prompts to create and manage your notes and notebooks.
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License.
